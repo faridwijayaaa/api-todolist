@@ -1,6 +1,10 @@
 const express = require("express");
 const route = express.Router();
-const { register } = require("../controllers/user.controller");
+const {
+  register,
+  login,
+  deleteUserById,
+} = require("../controllers/user.controller");
 
 route.get("/", (req, res) => {
   res.json({
@@ -8,6 +12,8 @@ route.get("/", (req, res) => {
   });
 });
 
-route.post("/", register);
+route.post("/register", register);
+route.post("/login", login);
+route.delete("/:userId", deleteUserById);
 
 module.exports = route;
