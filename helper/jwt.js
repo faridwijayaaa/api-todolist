@@ -2,11 +2,13 @@ require("dotenv").config();
 const jwt = require("jsonwebtoken");
 
 const generateToken = (payload) => {
-  return (token = jwt.sign(payload, process.env.TOKEN));
+  const token = jwt.sign(payload, process.env.TOKEN);
+  return token;
 };
 
 const verifyToken = (token) => {
-  return (decoded = jwt.verify(token, process.env.TOKEN));
+  const decoded = jwt.verify(token, process.env.TOKEN);
+  return decoded;
 };
 
 module.exports = {
