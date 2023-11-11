@@ -25,6 +25,7 @@ module.exports = {
         return res.status(403).json({ message: "FORBIDDEN" });
       }
     } catch (error) {
+      console.log("scope err authorization");
       return res.status(500).json(error);
     }
   },
