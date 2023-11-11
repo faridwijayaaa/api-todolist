@@ -5,9 +5,7 @@ module.exports = {
   authentication: async (req, res, next) => {
     try {
       const token = req.headers.authorization;
-      console.log("tes");
       const userDecoded = verifyToken(token);
-      console.log("tess");
       console.log(userDecoded);
 
       const userById = await User.findOne({
