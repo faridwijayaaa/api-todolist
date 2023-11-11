@@ -6,7 +6,7 @@ module.exports = {
     try {
       const token = req.headers.authorization;
       const userDecoded = verifyToken(token);
-    //   console.log(userDecoded);
+      console.log(userDecoded);
 
       const userById = await User.findOne({
         where: {
@@ -23,7 +23,7 @@ module.exports = {
       res.dataUser = userById;
       return next();
     } catch (error) {
-      console.log("erorr authentication scoope");
+      console.log("scope err authentication");
       return res.status(500).json({ msg: error });
     }
   },
