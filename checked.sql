@@ -6,3 +6,5 @@ select * from Users;
 
 select * from Todos;
 desc Todos;
+
+desc Users;
