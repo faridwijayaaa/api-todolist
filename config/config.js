@@ -2,8 +2,8 @@ require("dotenv").config();
 module.exports = {
   development: {
     username: "root",
-    password: null,
-    database: "test",
+    password: "Polopo.90",
+    database: "todoServer",
     host: "127.0.0.1",
     dialect: "mysql",
   },
